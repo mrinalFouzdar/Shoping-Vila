@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -27,7 +27,17 @@ import AdminChatsPage from "./pages/admin/AdminChatsPage";
 import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
+
+import { useEffect } from "react";
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
+
   return (
     <>
       <HeaderComponent />
@@ -74,6 +84,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
+      <div style={{marginBottom:"100px"}}></div>
       <FooterComponent />
     </>
   );
