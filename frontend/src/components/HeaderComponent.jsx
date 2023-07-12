@@ -76,7 +76,7 @@ const HeaderComponent = () => {
                 <Badge pill bg="danger">
                   2
                 </Badge>
-                <i class="bi bi-cart-dash"></i>
+                <i className="bi bi-cart-dash"></i>
                 <span className="ms-1">Cart</span>
               </Nav.Link>
             </Link>
