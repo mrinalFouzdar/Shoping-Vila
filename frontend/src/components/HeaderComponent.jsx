@@ -11,6 +11,7 @@ import {
   InputGroup,
   Nav,
   NavDropdown,
+  // NavLink,
   Navbar,
 } from "react-bootstrap";
 const HeaderComponent = () => {
@@ -22,9 +23,9 @@ const HeaderComponent = () => {
       data-bs-theme="dark"
     >
       <Container>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <Navbar.Brand>SHOPING VILA</Navbar.Brand>
-        </Link>
+        {/* <Link to="/" style={{ textDecoration: "none" }}> */}
+          <Navbar.Brand as={Link} to='/'>SHOPING VILA</Navbar.Brand>
+        {/* </Link> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           {/* NAV LEFT SECTION */}
@@ -65,21 +66,21 @@ const HeaderComponent = () => {
               <NavDropdown.Item>Logout</NavDropdown.Item>
             </NavDropdown>
 
-            <Link to="/Login" style={{ textDecoration: "none" }}>
-              <Nav.Link>Loing</Nav.Link>
-            </Link>
+            {/* <Link to="/Login" style={{ textDecoration: "none" }}> */}
+              <Nav.Link as={Link} to="/Login">Loing</Nav.Link>
+            {/* </Link> */}
             <Link to="/register" style={{ textDecoration: "none" }}>
-              <Nav.Link>Register</Nav.Link>
+              <Nav.Link as={Link} to='/register'>Register</Nav.Link>
             </Link>
-            <Link to="/cart" style={{ textDecoration: "none" }}>
-              <Nav.Link>
+            {/* <Link to="/cart" style={{ textDecoration: "none" }}> */}
+              <Nav.Link  as={Link} to='/cart'>
                 <Badge pill bg="danger">
                   2
                 </Badge>
                 <i className="bi bi-cart-dash"></i>
                 <span className="ms-1">Cart</span>
               </Nav.Link>
-            </Link>
+            {/* </Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

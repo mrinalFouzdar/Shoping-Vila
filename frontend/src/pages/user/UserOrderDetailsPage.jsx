@@ -3,7 +3,7 @@ import React from 'react'
 const UserOrderDetailsPage = () => {
   return (
     <div>
-      
+      UserOrderDetailsPage
     </div>
   )
 }

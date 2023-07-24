@@ -27,7 +27,6 @@ import AdminChatsPage from "./pages/admin/AdminChatsPage";
 import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
-
 import { useEffect } from "react";
 function App() {
   const { pathname } = useLocation();
@@ -36,13 +35,11 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-
-
   return (
     <>
       <HeaderComponent />
       <Routes>
-        <Route element={<RoutesWithUserChatComponent/>}>
+        <Route element={<RoutesWithUserChatComponent />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/product-list" element={<ProductListPage />} />
           <Route path="/product-details" element={<ProductDetails />} />
@@ -50,21 +47,18 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element="Page not exists 404" />
-          </Route>
+        </Route>
 
-          {/* user protected routes */}
-          <Route element={<ProtectedRoutesComponent admin={false} />}>
-            <Route path="/user" element={<UserProfilePage />} />
-            <Route path="/user/my-orders" element={<UserOdersPage />} />
-            <Route
-              path="/user/cart-details"
-              element={<UserCartDetailsPage />}
-            />
-            <Route
-              path="/user/order-details"
-              element={<UserOrderDetailsPage />}
-            />
-          </Route>
+        {/* user protected routes */}
+        <Route element={<ProtectedRoutesComponent admin={false} />}>
+          <Route path="/user" element={<UserProfilePage />} />
+          <Route path="/user/my-orders" element={<UserOdersPage />} />
+          <Route path="/user/cart-details" element={<UserCartDetailsPage />} />
+          <Route
+            path="/user/order-details"
+            element={<UserOrderDetailsPage />}
+          />
+        </Route>
 
         {/* admin protected routes:  */}
         <Route element={<ProtectedRoutesComponent admin={true} />}>
@@ -84,7 +78,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
-      <div style={{marginBottom:"100px"}}></div>
+      <div style={{ marginBottom: "100px" }}></div>
       <FooterComponent />
     </>
   );
