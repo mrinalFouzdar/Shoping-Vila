@@ -28,6 +28,7 @@ import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
 import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
 import { useEffect } from "react";
+import AdminOrderDetailsPage from "./pages/admin/AdminOrderDetailsPage";
 function App() {
   const { pathname } = useLocation();
 
@@ -64,6 +65,7 @@ function App() {
         <Route element={<ProtectedRoutesComponent admin={true} />}>
           <Route path="/admin/user" element={<AdminUserPage />} />
           <Route path="/admin/edit-user" element={<AdminEditUserPage />} />
+          
           <Route path="/admin/products" element={<AdminProductsPage />} />
           <Route
             path="/admin/create-new-product"
@@ -74,6 +76,10 @@ function App() {
             element={<AdminEditProductPage />}
           />
           <Route path="/admin/orders" element={<AdminOrdersPage />} />
+          <Route
+            path="/admin/order-details"
+            element={<AdminOrderDetailsPage />}
+          />
           <Route path="/admin/chats" element={<AdminChatsPage />} />
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>

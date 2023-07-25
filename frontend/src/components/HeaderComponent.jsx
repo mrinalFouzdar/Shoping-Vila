@@ -45,12 +45,10 @@ const HeaderComponent = () => {
 
           {/* NAV RIGHT SECTION */}
           <Nav>
-            <Link to="/admin/orders" style={{ textDecoration: "none" }}>
-              <Nav.Link>
+              <Nav.Link as={Link} to='/admin/orders'>
                 Admin
                 <span className="position-absolute top-1 start-10 translate-middle p-2 bg-danger border-light rounded-circle"></span>
               </Nav.Link>
-            </Link>
 
             <NavDropdown title="Mrinal" id="collasible-nav-dropdown">
               <NavDropdown.Item
@@ -66,13 +64,10 @@ const HeaderComponent = () => {
               <NavDropdown.Item>Logout</NavDropdown.Item>
             </NavDropdown>
 
-            {/* <Link to="/Login" style={{ textDecoration: "none" }}> */}
               <Nav.Link as={Link} to="/Login">Loing</Nav.Link>
-            {/* </Link> */}
-            <Link to="/register" style={{ textDecoration: "none" }}>
+            {/* <Link to="/register" style={{ textDecoration: "none" }}> */}
               <Nav.Link as={Link} to='/register'>Register</Nav.Link>
-            </Link>
-            {/* <Link to="/cart" style={{ textDecoration: "none" }}> */}
+            {/* </Link> */}
               <Nav.Link  as={Link} to='/cart'>
                 <Badge pill bg="danger">
                   2
@@ -80,7 +75,6 @@ const HeaderComponent = () => {
                 <i className="bi bi-cart-dash"></i>
                 <span className="ms-1">Cart</span>
               </Nav.Link>
-            {/* </Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
