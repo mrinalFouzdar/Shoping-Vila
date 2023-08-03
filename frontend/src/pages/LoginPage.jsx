@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {
@@ -13,7 +13,6 @@ import {
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -29,11 +28,11 @@ const LoginPage = () => {
   };
 
   const handleSubmit = (values, { setSubmitting }) => {
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
-      setIsSubmitting(false);
+      // setIsSubmitting(false);
     }, 500);
   };
 

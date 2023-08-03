@@ -1,0 +1,15 @@
+/* AdminCreateProductPage.css */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Additional styles for the form container */
+  .form-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

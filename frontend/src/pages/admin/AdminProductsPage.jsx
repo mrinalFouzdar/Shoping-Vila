@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import AdminLinkscomponent from "../../components/admin/AdminLinkscomponent";
 
 const AdminProductsPage = () => {
-
+  // const location = useLocation();
+  // const {productId} = useParams()
+  // console.log(location)
+  // console.log(productId)
   const deleteHandler =()=>{
     if(window.confirm('Are you sure?')) alert('Product deleted!')
   }
@@ -48,7 +51,7 @@ const AdminProductsPage = () => {
                 <td>{item?.price}</td>
                 <td>{item?.category}</td>
                 <td>
-                  <Button className="btn-sm" as={Link} to="/admin/edit-product">
+                  <Button className="btn-sm" as={Link} to={`/admin/edit-product/${idx}`}>
                     <i className="bi bi-pencil-square"></i>
                   </Button>
                   {" / "}
